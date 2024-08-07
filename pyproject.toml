@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "turtlish-flask-server"
+version = "0.1.0"
+description = "a tiny flask server for turtlish"
+authors = ["Shaheen <riseandshaheen@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
