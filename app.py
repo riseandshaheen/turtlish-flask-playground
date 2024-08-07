@@ -7,10 +7,8 @@ from turtlish import draw_with_turtle_to_base64
 import matplotlib
 matplotlib.use('Agg')
 
-# Assuming the Turtlish and related functions are defined as above and imported here
-
 app = Flask(__name__)
-CORS(app)  # Allows cross-origin requests for frontend communication
+CORS(app) 
 
 @app.route("/")
 def start():
