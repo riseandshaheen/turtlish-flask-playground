@@ -12,6 +12,10 @@ matplotlib.use('Agg')
 app = Flask(__name__)
 CORS(app)  # Allows cross-origin requests for frontend communication
 
+@app.route("/")
+def start():
+    return "Turtlish flask server is Running"
+
 @app.route('/draw', methods=['POST'])
 def draw():
     try:
@@ -30,5 +34,3 @@ def draw():
         error_message = f"While executing code: {e}"
         return jsonify({"error": error_message}), 500
 
-if __name__ == '__main__':
-    app.run(debug=True)
